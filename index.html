@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>我的封面</title>
+<meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1"/>
+<style>
+html, body, main{
+height: 70%;
+}
+
+body{
+margin: 0;
+user-select: none;
+font: lighter 18px "微软雅黑";
+font-weight:500;
+}
+body:before{
+content: "";
+z-index: -1;
+width: 3000px;
+height: 3000px;
+display: block;
+position: fixed;
+top: calc(50% - 1500px);
+left: calc(50% - 1500px);
+animation: bg-rotate 15s infinite linear;
+background: linear-gradient(45deg, #20b57d 40%, #258ec5 60%);
+}
+
+@keyframes bg-rotate {
+0%{ transform: rotate(0) }
+100%{ transform: rotate(360deg) }
+}
+
+a{
+text-decoration: none;
+}
+
+main{
+display: table;
+margin: 0 auto;
+}
+
+.content{
+padding-top: 10px;
+padding-bottom: 0px;
+text-align: center;
+display: table-cell;
+vertical-align: middle;
+}
+
+.logo{
+margin-bottom: 20px;
+}
+.logo img{
+height: auto;
+max-width: 120px;
+border-radius: 100%;
+border: 3px solid #fff;
+transition: transform 2s;
+}
+.logo img:hover{
+transform: scale(1.1, 1.1) rotate(1turn);
+}
+
+.links{
+max-width: 300px;
+}
+.links a{
+color: #fff;
+display: block;
+min-width: 80px;
+padding: 0.5em 1em;
+text-align: center;
+margin-bottom: 1em;
+border-radius: 30px;
+border: #fff 2px solid;
+transition: background 0.3s, color 0.3s, opacity 0.3s, transform 0.3s;
+}
+.links a:hover{
+color: #258ec5;
+background: #fff;
+transform: scale(1.1, 1.1);
+}
+.links a:active{
+opacity: 0.7;
+transform: scale(0.9, 0.9);
+}
+.links a:last-child{
+margin-bottom: 0;
+}
+
+footer{
+left: 0;
+right: 0;
+bottom: 0;
+color: #fff;
+position: fixed;
+text-align: center;
+}
+footer a{
+color: inherit;
+}
+</style>
+</head>
+<body>
+
+<!--内容-->
+<main class="container">
+<div class="content">
+<div class="logo">
+<img src="css/head.jpg" alt="123" />
+</div>
+
+<div class="links">
+<a href="css/homepage.html"><b>我的首页</b></a>
+</div>
+</div>
+</main>
+
+<!--搜索栏-->
+<div style="display:flex;justify-content:center;">
+<img src="css/baidu.png" width="200px" />
+</div>
+
+<div style="display:flex;justify-content:center;">
+<form action="https://www.baidu.com/s">
+<input type="text" name="word" placeholder="输入关键词，回车搜索"
+style="height:35px; width:280px; padding-left:10px; border-radius:10px; outline:none; border-color:#02C874 "/>
+<br><br>
+</form>
+</div>
+
+<!--天气+日期-->
+<div style="display:flex;justify-content:center;">
+<iframe scrolling="no" src="https://tianqiapi.com/api.php?style=ts&skin=pitaya" frameborder="0" width="325" height="220" allowtransparency="true"></iframe>
+</div>
+</body>
+
+<!--脚注-->
+<footer>
+<p>CopyRight <script>document.write(new Date().toLocaleDateString())
+</script> By <a href="css/homepage.html" target="_blank">WHX</a></p>
+</footer>
+
+</html>
