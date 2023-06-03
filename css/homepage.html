@@ -1,0 +1,1758 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<!--头部信息-->
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>我的首页——爱上上网</title>
+<meta name="keywords" content="网址导航"/>
+<meta name="description" content="简单实用"/>
+
+<!--网站logo-->
+<link rel="shortcut icon" type="image/x-icon" href="logo.png"/>
+
+<!--CSS 谨慎修改--><!--这是本地css保留 <link a href="zui.min.css" rel="stylesheet" type="text/css"/> -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/zui/1.10.0/css/zui.min.css" rel="stylesheet" type="text/css"/>
+<style type="text/css"/>
+ul {
+padding: 0;
+}
+li {
+list-style: none;
+}
+a:hover,a:active,a:focus {
+text-decoration: none;
+}
+body {
+background-image: url(background.jpg);
+background-repeat:repeat;
+background-attachment:fixed;
+overflow-x: hidden;
+overflow-y: auto;
+}
+i.icon,i.fa {
+margin-right: 6px
+}
+.col, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+padding: 0px 5px;
+}
+header {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+z-index: 100;
+height: 40px;
+background: #FFF;
+}
+header .logo {
+font-size: 18px;
+height: 40px;
+margin: 0;
+font-weight: 400;
+position: relative;
+z-index: 99;
+border-bottom: 1px solid #e8e8e8;
+background: #FFF;
+text-align:center;
+}
+header .main {
+position: relative;
+}
+header .nav {
+width: 100%;
+margin-left: 25px;
+background: #FFF;
+margin: 0;
+overflow: hidden;
+transition: all 0.4s ease;
+-moz-transition: all 0.4s ease;
+/* Firefox 4 */
+-webkit-transition: all 0.4s ease;
+/* Safari Chrome */
+-o-transition: all 0.4s ease;
+/* Opera */
+position: absolute;
+top: -300px;
+left: 0;
+}
+header .showNav {
+top: 50px;
+box-shadow: 0 5px 5px rgba(204,204,204,.15);
+-moz-box-shadow: 0 5px 5px rgba(204,204,204,.15);
+}
+header .nav li {
+font-size: 16px;
+}
+header .nav a {
+display: block;
+line-height: 40px;
+font-size: 16px;
+color: #959595;
+padding: 0 25px;
+border-bottom: 1px solid #f5f5f5;
+}
+header .nav a:hover {
+border-color: #459df5;
+color: #459df5;
+}
+header .head-btn {
+float: right;
+line-height: 40px;
+}
+header .head-btn a {
+margin-left: 5px;
+display: inline-block;
+width: 30px;
+height: 30px;
+line-height: 30px;
+text-align: center;
+background: #f5f5f5;
+color: #03b8cf;
+border: 1px solid #e5e5e5;
+transition: all .2s;
+-moz-transition: all .2s;
+/* Firefox 4 */
+-webkit-transition: all .2s;
+/* Safari Chrome */
+-o-transition: all .2s;
+/* Opera */
+}
+header .head-btn a:hover {
+background: #03b8cf;
+color: #FFF;
+border: 1px solid #03b8cf;
+}
+header .head-btn a>i {
+margin-right: 0px;
+font-size: 15px;
+}
+header .nav-btn {
+position: fixed;
+border: none;
+background: transparent;
+top: 0;
+left: 10px;
+outline: 0;
+margin-top: 10px;
+z-index: 100
+}
+header .nav-btn {
+left: inherit;
+right: 10px;
+}
+header .nav-btn .icon-line {
+display: block;
+margin: 6px 0;
+width: 25px;
+height: 2px;
+background: #999;
+cursor: pointer;
+transition: all .4s ease;
+-moz-transition: all .4s ease;
+/* Firefox 4 */
+-webkit-transition: all .4s ease;
+/* Safari Chrome */
+-o-transition: all .4s ease;
+/* Opera */
+}
+header .nav-btn .middle {
+margin: 0 auto;
+}
+header .animated2 .top {
+transform: translateY(8px) rotateZ(45deg);
+-ms-transform: translateY(8px) rotateZ(45deg);
+/* IE 9 */
+-moz-transform: translateY(8px) rotateZ(45deg);
+/* Firefox */
+-webkit-transform: translateY(8px) rotateZ(45deg);
+/* Safari 鍜� Chrome */
+-o-transform: translateY(8px) rotateZ(45deg);
+/* Opera */
+}
+header .animated2 .middle {
+width: 0;
+}
+header .animated2 .bottom {
+transform: translateY(-8px) rotateZ(-45deg);
+-ms-transform: translateY(-8px) rotateZ(-45deg);
+/* IE 9 */
+-moz-transform: translateY(-8px) rotateZ(-45deg);
+/* Firefox */
+-webkit-transform: translateY(-8px) rotateZ(-45deg);
+/* Safari Chrome */
+-o-transform: translateY(-8px) rotateZ(-45deg);
+/* Opera */
+}
+.left-bar {
+position: fixed;
+top: 50px;
+left: -240px;
+width: 200px;
+max-width: 100%;
+height: 100%;
+background: #353535;
+z-index: 12;
+transition: all 0.4s ease;
+-moz-transition: all 0.4s ease;
+/* Firefox 4 */
+-webkit-transition: all 0.4s ease;
+/* Safari 鍜� Chrome */
+-o-transition: all 0.4s ease;
+/* Opera */
+transform: translateZ(0);
+-ms-transform: translateZ(0);
+/* IE 9 */
+-moz-transform: translateZ(0);
+/* Firefox */
+-webkit-transform: translateZ(0);
+/* Safari 鍜� Chrome */
+-o-transform: translateZ(0);
+/* Opera */
+}
+.left-bar .header {
+padding: 0px 15px;
+border-bottom: 1px solid #464646;
+}
+.left-bar .header h2 {
+font-size: 16px;
+line-height: 40px;
+max-width: 100%;
+overflow: hidden;
+margin: 0;
+font-weight: 400;
+display: block;
+color: #ccc;
+}
+.left-bar .menu {
+height: 450px;
+margin-bottom: 15px;
+border-bottom: 1px solid #424242
+}
+.left-bar .menu ul li a {
+display: block;
+height: 30px;
+line-height: 30px;
+font-size: 14px;
+color: #777;
+padding-left: 30px;
+}
+.scrollcontent {
+width: 100%;
+top: 0;
+left: 0;
+padding-right: 4px;
+padding-top: 5px
+}
+.left-bar .menu ul li a:hover {
+background: #f5f5f5
+}
+.left-bar .menu ul li i.fa {
+width: 15px;
+text-align: center;
+margin-right: 20px
+}
+.left-bar .tree li.open > ul::-webkit-scrollbar {
+width: 3px;
+margin-right: 2px
+}
+.menu-about p {
+font-size: 12px;
+color: #ccc;
+text-align: center;
+}
+#content {
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+}
+#content > .Off-left-menu {
+display: none;
+}
+#content > div.center-main {
+margin: 0 auto;
+}
+.sousuo {
+padding:35px 0;
+}
+.search {
+position: relative;
+width: 100%;
+margin: 0 auto;
+}
+.search-box {
+height: 50px;
+/*box-shadow: 0px 0px 2px 0px #ccc;*/
+border-radius: 10px;
+overflow: hidden;
+display: -webkit-flex;
+/* Safari */
+display: flex;
+flex-wrap: wrap;
+border: 1px solid #e6e6e6
+}
+.search-engine-name {
+width: 70px;
+height: 50px;
+background: #16C0F8;
+border: none;
+color: #fff;
+font-weight: bold;
+outline: none;
+}
+.search-input {
+box-sizing: border-box;
+flex: 1;
+height: 50px;
+line-height: 50px;
+font-size: 16px;
+color: #999;
+border: none;
+outline: none;
+padding-left: 6px;
+}
+input::-webkit-input-placeholder {
+font-size: 12px;
+letter-spacing: 1px;
+color: #ccc;
+}
+.search-btn {
+width: 70px;
+height: 50px;
+background: #16C0F8;
+border: none;
+color: #fff;
+font-weight: bold;
+outline: none;
+}
+.search-engine {
+position: absolute;
+top: 60px;
+left: 0;
+width: 100%;
+background: #FFF;
+padding: 15px 0 0 15px;
+border-radius: 5px;
+box-shadow: 0px 5px 20px 0px #d8d7d7;
+transition: all 0.3s;
+display: none;
+z-index: 999
+}
+.search-engine-head {
+overflow: hidden;
+margin-bottom: 10px;
+padding-right: 15px;
+}
+.search-engine-tit {
+float: left;
+margin: 0;
+font-size: 14px;
+color: #999;
+}
+.search-engine ul::before {
+content: "";
+width: 0px;
+height: 0px;
+position: absolute;
+top: -15px;
+border-top: 8px solid transparent;
+border-right: 8px solid transparent;
+border-bottom: 8px solid #fff;
+border-left: 8px solid transparent;
+}
+.search-engine-list::after {
+content: "";
+width: 70px;
+height: 18px;
+position: absolute;
+top: -17px;
+left: 1px;
+}
+.search-engine-list li {
+float: left;
+width: 30%;
+line-height: 30px;
+font-size: 14px;
+padding: 5px 10px 5px 10px;
+margin: 0 10px 10px 0;
+background: #f9f9f9;
+color: #999;
+cursor: pointer
+}
+.search-engine-list li img {
+width: 25px;
+height: 25px;
+border-radius: 15px;
+float: left;
+margin-right: 5px;
+margin-top: 2.5px;
+}
+#content .content-box {
+padding-top: 51px
+}
+.content-box {
+max-width: 1200px;
+margin: 0 auto;
+padding: 0 10px;
+}
+.item {
+width: 100%;
+}
+.item > .container-fluid {
+padding-top: 0;
+margin-top: 0;
+}
+.item > .container-fluid .row {
+padding:10px 5px;
+}
+.item-tit > strong {
+color:#999;
+font-size: 18px;
+font-weight: 400;
+display: block;
+margin-bottom: 10px;
+padding-left: 5px;
+}
+.item-tit > strong > i {
+margin-right: 5px;
+font-size: 18px;
+}
+.card-link {
+display: block;
+padding: 10px 10px;
+border-radius: 5px;
+overflow: hidden;
+margin-bottom: 10px;
+background: #fff;
+transition: all 0.2s ease-out;
+-moz-transition: all 0.2s ease-out;
+/* Firefox 4 */
+-webkit-transition: all 0.2s ease-out;
+/* Safari Chrome */
+-o-transition: all 0.2s ease-out;
+/* Opera */
+}
+.card-link:hover {
+transform: translateY(-5px);
+-ms-transform: translateY(-5px);
+/* IE 9 */
+-moz-transform: translateY(-5px);
+/* Firefox */
+-webkit-transform: translateY(-5px);
+/* Safari Chrome */
+-o-transform: translateY(-5px);
+/* Opera */
+box-shadow: 4px 4px 10px rgba(204, 204, 204, 0.5);
+-moz-box-shadow: 4px 4px 10px rgba(204, 204, 204, 0.5);
+/* Firefox */
+}
+.card-tit {
+height: 25px;
+font-size: 18px;
+font-weight: 700;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: normal;
+}
+.card-tit img {
+width: 40px;
+height: 40px;
+border-radius: 50%;
+margin-right: 5px;
+}
+.card-desc {
+color: gray;
+font-size: 12px;
+padding-top: 10px;
+height: 25px; <!--网站说明文字的高度-->
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: normal;
+display: -webkit-box;
+-webkit-line-clamp: 2;
+-webkit-box-orient: vertical;
+}
+.content-box .list-box {
+background: #FFF;
+padding: 20px 10px 0px 10px;
+margin: 0;
+}
+#get-top {
+width: 40px;
+height: 40px;
+background: #03b8cf;
+color: #FFF;
+position: fixed;
+right: 15px;
+bottom: 55px;
+line-height: 30px;
+text-align: center;
+font-size: 30px;
+cursor: pointer;
+display: none;
+z-index: 100;
+}
+#get-top i {
+margin: 0;
+font-size: 20px;
+}
+.footer {
+padding: 15px 20px 10px 20px;
+border-top: 1px solid #d0d0d0;
+background-color: #e8e8e8;
+text-align: center;
+font-size: 14px;
+color: #5d5d5d;
+}
+@media (min-width: 768px) {
+.col, .col-xs-1, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9, .col-xs-10, .col-xs-11, .col-xs-12, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
+padding: 0 10px
+}
+#content .main {
+padding-top: 51px;
+}
+.sousuo {
+padding: 10px 0 50px 0;
+margin-top: 0;
+}
+.sousuo-form {
+width: 100%;
+margin: 0 auto;
+}
+#input {
+outline: none;
+padding: 0 10px;
+height: 46px;
+line-height: 46px;
+border: 1px solid #ccc;
+border-left: none;
+display: block;
+padding-left: 90px;
+}
+.link-box {
+width: 12.5%;
+float: left
+}
+.item-tit > strong {
+padding: 5px 0 0 10px;
+margin-bottom: 10px;
+}
+.get-home {
+margin: 0;
+margin-top: 20px;
+}
+.footer {
+margin-top: 20px;
+}
+}
+@media (min-width: 992px) {
+header {
+height: 50px;
+border-bottom: 1px solid #e8e8e8;
+}
+header .main {
+padding: 0 22px;
+}
+header .logo {
+float: left;
+font-size: 18px;
+margin: 0;
+font-weight: 400;
+border: none;
+}
+header .logo a {
+display: block;
+line-height: 50px;
+color: #484848;
+font-weight: 400;
+}
+header .logo img {
+width: 30px;
+vertical-align: -10px;
+}
+header .nav {
+float: left;
+margin-left: 25px;
+padding-top: 0px;
+height: 100%;
+display: block;
+overflow: hidden;
+position: static;
+width: auto;
+box-shadow: none;
+}
+header .nav li {
+float: left;
+font-size: 16px;
+}
+header .nav a {
+display: block;
+line-height: 49px;
+color: #959595;
+padding: 0 18px;
+border-bottom: 1px solid #e8e8e8;
+}
+header .nav a:hover {
+border-color: #459df5;
+color: #459df5;
+}
+.left-bar {
+height: 100%;
+background: #FFF;
+top: 50px;
+left: 0;
+z-index: 1;
+}
+.left-bar .header {
+padding: 11px 0px;
+border-bottom: none;
+margin: 0 25px;
+padding-top: 15px;
+}
+.left-bar .header h2 {
+color: #28b779;
+font-size: 16px;
+font-weight: bold;
+line-height: inherit;
+border-left: 3px solid #28b779;
+padding-left: 10px;
+}
+.left-bar .menu {
+height: 600px;
+border-top: 1px solid #f2f2f2;
+border-bottom: 1px solid #f2f2f2
+}
+.left-bar .tree-menu {
+border-bottom: 1px solid #e8e8e8;
+}
+.left-bar .tree li.open > ul {
+height: 281px;
+background: #f5f5f5;
+}
+.tree-menu li li a {
+color: #797979;
+font-size: 14px;
+}
+.search {
+width: 650px;
+}
+.search-engine {
+width: 650px;
+}
+.search-engine-list li {
+width: 112px;
+margin: 0 15px 15px 0;
+}
+#content .main {
+margin-left: 200px;
+padding-top: 70px
+}
+.content-box {
+padding: 0 10px;
+padding-top: 61px
+}
+.nav-item .container-fluid {
+padding: 20px 20px 10px 20px;
+}
+.item > .container-fluid .row {
+padding: 0;
+}
+.card-box .col-md-3 {
+padding: 0 7.5px;
+}
+.card-link {
+margin-bottom: 15px;
+}
+.main .list-box .menu-list {
+margin: 0px 10px 20px 10px;
+}
+.nav-tabs > li > a {
+padding: 4px 15px;
+}
+.footer {
+margin-top: 30px;
+}
+}
+@media (min-width: 1200px) {
+header .nav a {
+padding: 0 25px;
+}
+.content-box {
+padding: 0 20px;
+}
+.sousuo-form {
+width: 60%
+}
+.item > .container-fluid {
+padding: 0;
+padding-top: 91px;
+margin-top: -65px;
+}
+}
+@media (min-width: 1700px) {
+.content-box {
+max-width: 1400px;
+}
+.col-md-3 {
+width: 20%;
+}
+}
+</style>
+</head>
+
+<body id="nav_body">
+<!--头部导航条-->
+<header>
+<div class="main">
+<h1 class="logo">
+<a href="https://whx84.github.io/">
+<img src="logo.png" width="30" height=auto/>
+<span>&ensp;我的首页</span>
+</a>
+</h1>
+
+<!--顶部导航条-->
+<nav class="nav">
+<ul>
+<li><a href="https://whx84.github.io/" target="_blank">我的封面</a></li>
+<li><a href="soft.html" target="_blank">我的软件</a></li>
+<li><a href="work.html" target="_blank">我的工作</a></li>
+<li><a href="txt.html" target="_blank">我的简介</a></li>
+</ul>
+</nav>
+
+<!--便携设备右上角菜单-->
+<button class="nav-btn visible-xs visible-sm"><span class="icon-line top"></span><span class="icon-line middle"></span><span class="icon-line bottom"></span>
+</button>
+</div>
+</header>
+<div id="content">
+
+<!--左侧目录，导航跳转-->
+<div class="left-bar">
+<div class="header">
+<h2>目录</h2>
+</div>
+
+<!--左侧目录，按照需要修改和添加，参考已有的修改名称和href-->
+<div class="menu" id="menu">
+<ul class="scrollcontent">
+<li><a href="#row-1">01 主页+导航</a></li>
+<li><a href="#row-2">02 新闻+资讯</a></li>
+<li><a href="#row-3">03 邮箱</a></li>
+<li><a href="#row-4">04 天气</a></li>
+<li><a href="#row-5">05 翻译</a></li>
+<li><a href="#row-6">06 地图+出行</a></li>
+<li><a href="#row-7">07 购物</a></li>
+<li><a href="#row-8">08 网盘+盘搜</a></li>
+<li><a href="#row-9">09 社交+社区</a></li>
+<li><a href="#row-10">10 图片</a></li>
+<li><a href="#row-11">11 音乐+有声</a></li>
+<li><a href="#row-12">12 影视</a></li>
+<li><a href="#row-13">13 学习</a></li>
+<li><a href="#row-14">14 美食</a></li>
+<li><a href="#row-15">15 医学</a></li>
+<li><a href="#row-16">16 银行</a></li>
+<li><a href="#row-17">17 软件下载</a></li>
+<li><a href="#row-18">18 其他实用</a></li>
+</ul>
+</div>
+</div>
+
+<!--内容-->
+<div class="main">
+<div class="container content-box">
+
+<!--天气+日期-->
+<div style="display:flex;justify-content:center;">
+<iframe scrolling="no" src="https://tianqiapi.com/api.php?style=tx&skin=pitaya" frameborder="0" width="320" height="30" allowtransparency="true"></iframe>
+</div>
+
+<!--搜索栏-->
+<section class="sousuo">
+<div class="search">
+<div class="search-box">
+<button class="search-engine-name" id="search-engine-name">百度</button>
+<input type="text" id="txt" class="search-input" placeholder="点击“百度”有更多搜索引擎可选"/>
+<button class="search-btn" id="search-btn">搜一下</button>
+</div>
+
+<!-- 搜索引擎 -->
+<div class="search-engine">
+<div class="search-engine-head">
+<strong class="search-engine-tit">选择搜索引擎：</strong>
+</div>
+<ul class="search-engine-list">
+</ul>
+</div>
+</div>
+</section>
+
+<!--第1栏-->
+<section class="item card-box" id="row-1">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>01 主页+导航</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix two-list-box">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.baidu.com/" class="card-link" target="_blank">
+<div class="card-tit">百度首页</div>
+<div class="card-desc">界面简洁清爽、常用</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://cn.bing.com/" class="card-link" target="_blank">
+<div class="card-tit">必应首页</div>
+<div class="card-desc">相比百度，能搜索到更多</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.benbenla.com/" class="card-link" target="_blank">
+<div class="card-tit">本本啦</div>
+<div class="card-desc">专为笔记本开发的导航</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://ezamas.com/" class="card-link" target="_blank">
+<div class="card-tit">一方天地</div>
+<div class="card-desc">一个有趣有料的导航</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.xiaozhong.top/netFav" class="card-link" target="_blank">
+<div class="card-tit">小众收藏</div>
+<div class="card-desc">网站导航收录多</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://ishuqian.com/" class="card-link" target="_blank">
+<div class="card-tit">书签导航</div>
+<div class="card-desc">模板值得学习</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第2栏-->
+<section class="item card-box" id="row-2">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>02 新闻+资讯</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://news.ifeng.com/" class="card-link" target="_blank">
+<div class="card-tit">凤凰资讯</div>
+<div class="card-desc">最中立的新闻</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://tophub.today/" class="card-link" target="_blank">
+<div class="card-tit">今日热榜</div>
+<div class="card-desc">热点资讯汇总</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.autohome.com.cn/" class="card-link" target="_blank">
+<div class="card-tit">汽车之家</div>
+<div class="card-desc">看车就用它</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.53bk.com/baokan/" class="card-link" target="_blank">
+<div class="card-tit">在线读报</div>
+<div class="card-desc">竟有这么多报纸</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第3栏-->
+<section class="item card-box" id="row-3">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>03 邮箱</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.126.com/" class="card-link" target="_blank">
+<div class="card-tit">网易126邮箱</div>
+<div class="card-desc">我的专用</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://mailnav.cn/" class="card-link" target="_blank">
+<div class="card-tit">更多邮箱</div>
+<div class="card-desc">邮箱官网汇集</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第4栏-->
+<section class="item card-box" id="row-4">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>04 天气</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://m.moji.com/" class="card-link" target="_blank">
+<div class="card-tit">墨迹天气</div>
+<div class="card-desc">手机版</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://weather.cma.cn/" class="card-link" target="_blank">
+<div class="card-tit">中国气象局</div>
+<div class="card-desc">电脑版</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第5栏-->
+<section class="item card-box" id="row-5">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>05 翻译</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://dict.youdao.com/" class="card-link" target="_blank">
+<div class="card-tit">有道翻译</div>
+<div class="card-desc">有道翻译</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://fanyi.sogou.com/" class="card-link" target="_blank">
+<div class="card-tit">搜狗翻译</div>
+<div class="card-desc">搜狗翻译</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://fanyi.qq.com/" class="card-link" target="_blank">
+<div class="card-tit">腾讯翻译</div>
+<div class="card-desc">腾讯翻译</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://cn.bing.com/translator/" class="card-link" target="_blank">
+<div class="card-tit">必应翻译</div>
+<div class="card-desc">必应翻译</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第6栏-->
+<section class="item card-box" id="row-6">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>06 地图+出行</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.amap.com/" class="card-link" target="_blank">
+<div class="card-tit">高德地图</div>
+<div class="card-desc">高德地图</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://map.baidu.com/" class="card-link" target="_blank">
+<div class="card-tit">百度地图</div>
+<div class="card-desc">百度地图</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.12306.cn/" class="card-link" target="_blank">
+<div class="card-tit">12306</div>
+<div class="card-desc">火车票购买官网</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.890z.com/url/lvyou.html" class="card-link" target="_blank">
+<div class="card-tit">更多出行资源</div>
+<div class="card-desc">购票 旅行社 航司 酒店</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第7栏-->
+<section class="item card-box" id="row-7">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>07 购物</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.1688.com/" class="card-link" target="_blank">
+<div class="card-tit">阿里巴巴</div>
+<div class="card-desc">阿里巴巴</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.amazon.cn/" class="card-link" target="_blank">
+<div class="card-tit">亚马逊</div>
+<div class="card-desc">亚马逊</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.jd.com/" class="card-link" target="_blank">
+<div class="card-tit">京东</div>
+<div class="card-desc">京东</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.benbenla.com/mall/" class="card-link" target="_blank">
+<div class="card-tit">更多网购资源</div>
+<div class="card-desc">网上购物汇总</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第8栏-->
+<section class="item card-box" id="row-8">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>08 网盘+盘搜</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://pan.baidu.com/" class="card-link" target="_blank">
+<div class="card-tit">百度云盘</div>
+<div class="card-desc">存资料安全 下载限速</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.aliyundrive.com/sign/" class="card-link" target="_blank">
+<div class="card-tit">阿里云盘</div>
+<div class="card-desc">看电影电视资源多不限速</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.123pan.com/" class="card-link" target="_blank">
+<div class="card-tit">123网盘</div>
+<div class="card-desc">大文件分享 直接下载</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.lanzou.com/" class="card-link" target="_blank">
+<div class="card-tit">蓝奏云</div>
+<div class="card-desc">小文件分享 直接下载</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.upyunso.com/" class="card-link" target="_blank">
+<div class="card-tit">UP云搜</div>
+<div class="card-desc">搜阿里云盘资源</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.pansoso.org/" class="card-link" target="_blank">
+<div class="card-tit">盘搜搜</div>
+<div class="card-desc">搜百度云盘资源</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.pansearch.me/" class="card-link" target="_blank">
+<div class="card-tit">网盘资源搜索</div>
+<div class="card-desc">综合搜索</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://panother.com/" class="card-link" target="_blank">
+<div class="card-tit">盘他搜索</div>
+<div class="card-desc">百度阿里蓝奏三盘搜</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.chaonengsou.com/" class="card-link" target="_blank">
+<div class="card-tit">超能搜</div>
+<div class="card-desc">各类搜索集合</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://mailnav.cn/disk" class="card-link" target="_blank">
+<div class="card-tit">更多网盘与盘搜</div>
+<div class="card-desc">更多网盘与盘搜集合</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第9栏-->
+<section class="item card-box" id="row-9">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>09 社交+社区</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://tieba.baidu.com/" class="card-link" target="_blank">
+<div class="card-tit">百度贴吧</div>
+<div class="card-desc">百度贴吧</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://weibo.com/" class="card-link" target="_blank">
+<div class="card-tit">新浪微博</div>
+<div class="card-desc">新浪微博</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.douban.com/" class="card-link" target="_blank">
+<div class="card-tit">豆瓣网</div>
+<div class="card-desc">书籍、电影、音乐</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.guokr.com/" class="card-link" target="_blank">
+<div class="card-tit">果壳</div>
+<div class="card-desc">泛科普科学文化平台</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第10栏-->
+<section class="item card-box" id="row-10">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>10 图片</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.bizhi88.com/" class="card-link" target="_blank">
+<div class="card-tit">壁纸网</div>
+<div class="card-desc">壁纸网</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.foodiesfeed.com/" class="card-link" target="_blank">
+<div class="card-tit">美食图片</div>
+<div class="card-desc">美食图片</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://pixabay.com/zh/photos/" class="card-link" target="_blank">
+<div class="card-tit">Pixabay</div>
+<div class="card-desc">免费正版高清照片</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.pexels.com/zh-cn/" class="card-link" target="_blank">
+<div class="card-tit">Pexels</div>
+<div class="card-desc">海量共享图片素材</div>
+</a>
+</div>
+
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://pic.netbian.com/" class="card-link" target="_blank">
+<div class="card-tit">彼岸图</div>
+<div class="card-desc">彼岸图</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.91sotu.com/" class="card-link" target="_blank">
+<div class="card-tit">搜图导航</div>
+<div class="card-desc">搜图导航</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第11栏-->
+<section class="item card-box" id="row-11">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>11 音乐+有声</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://music.163.com/" class="card-link" target="_blank">
+<div class="card-tit">网易云音乐</div>
+<div class="card-desc">在线听歌</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.2t58.com/" class="card-link" target="_blank">
+<div class="card-tit">爱听音乐网</div>
+<div class="card-desc">音乐搜索欣赏下载</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.ximalaya.com/" class="card-link" target="_blank">
+<div class="card-tit">喜马拉雅</div>
+<div class="card-desc">喜马拉雅</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.lrts.me/" class="card-link" target="_blank">
+<div class="card-tit">懒人听书</div>
+<div class="card-desc">懒人听书</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.zaixianai.cn/" class="card-link" target="_blank">
+<div class="card-tit">在线AI转换</div>
+<div class="card-desc">在线文本转语音</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.naturalreaders.com/online/" class="card-link" target="_blank">
+<div class="card-tit">文本转语音</div>
+<div class="card-desc">在线文本转语音</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第12栏-->
+<section class="item card-box" id="row-12">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>12 影视</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://tv.cctv.cn/m/" class="card-link" target="_blank">
+<div class="card-tit">央视直播</div>
+<div class="card-desc">在线看央视</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.tvquanqiu.com/" class="card-link" target="_blank">
+<div class="card-tit">看全球</div>
+<div class="card-desc">全球电视直播大汇</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://vip.bljiex.com/" class="card-link" target="_blank">
+<div class="card-tit">视频解析</div>
+<div class="card-desc">在线影视点播</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.549.tv/" class="card-link" target="_blank">
+<div class="card-tit">影视森林</div>
+<div class="card-desc">超多影视站导航</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第13栏-->
+<section class="item card-box" id="row-13">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>13 学习</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.smartedu.cn/" class="card-link" target="_blank">
+<div class="card-tit">国家智慧教育</div>
+<div class="card-desc">公共服务平台</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.xuexi.cn/" class="card-link" target="_blank">
+<div class="card-tit">学习强国</div>
+<div class="card-desc">学习强国</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://cnki.net/" class="card-link" target="_blank">
+<div class="card-tit">中国知网</div>
+<div class="card-desc">中国知网</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://open.nlc.cn/" class="card-link" target="_blank">
+<div class="card-tit">国图公开课</div>
+<div class="card-desc">国图公开课</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://open.163.com/" class="card-link" target="_blank">
+<div class="card-tit">网易公开课</div>
+<div class="card-desc">网易公开课</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://yixi.tv/speech/" class="card-link" target="_blank">
+<div class="card-tit">一席</div>
+<div class="card-desc">一席</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://weread.qq.com/" class="card-link" target="_blank">
+<div class="card-tit">微信读书</div>
+<div class="card-desc">各类书籍免费看</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.51zxw.net/" class="card-link" target="_blank">
+<div class="card-tit">我要自学网</div>
+<div class="card-desc">免费开放内容丰富</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.diyijc.com/" class="card-link" target="_blank">
+<div class="card-tit">第一教程网</div>
+<div class="card-desc">中小学优质课视频教程</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.dzkbw.com/" class="card-link" target="_blank">
+<div class="card-tit">电子课本网</div>
+<div class="card-desc">中小学电子课本</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.asklib.com/" class="card-link" target="_blank">
+<div class="card-tit">问答库</div>
+<div class="card-desc">问答库</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.kekenet.com/" class="card-link" target="_blank">
+<div class="card-tit">可可英语</div>
+<div class="card-desc">可可英语</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.faxin.cn/keyword/index.aspx" class="card-link" target="_blank">
+<div class="card-tit">法信-法律仓库</div>
+<div class="card-desc">学点法律</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.xue8nav.com/" class="card-link" target="_blank">
+<div class="card-tit">学吧工具</div>
+<div class="card-desc">汇集了国内外优质学习网站</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第14栏-->
+<section class="item card-box" id="row-14">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>14 美食</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.meishichina.com/" class="card-link" target="_blank">
+<div class="card-tit">美食天下</div>
+<div class="card-desc">手机体验不佳</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.douguo.com/" class="card-link" target="_blank">
+<div class="card-tit">豆果美食</div>
+<div class="card-desc">手机体验完美</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.xiangha.com/" class="card-link" target="_blank">
+<div class="card-tit">香哈网</div>
+<div class="card-desc">手机体验完美</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.xinshipu.com/" class="card-link" target="_blank">
+<div class="card-tit">心食谱</div>
+<div class="card-desc">手机体验完美</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第15栏-->
+<section class="item card-box" id="row-15">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>15 医学</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.medtranslation.cn/index.html" class="card-link" target="_blank">
+<div class="card-tit">中华医学网</div>
+<div class="card-desc">中华医学网</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.ccmtv.cn/" class="card-link" target="_blank">
+<div class="card-tit">CCMTV临床</div>
+<div class="card-desc">CCMTV临床频道</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.yixue5.com/" class="card-link" target="_blank">
+<div class="card-tit">医学网</div>
+<div class="card-desc">医学网</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.msdmanuals.cn/" class="card-link" target="_blank">
+<div class="card-tit">默沙东诊疗手册</div>
+<div class="card-desc">默沙东诊疗手册</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第16栏-->
+<section class="item card-box" id="row-16">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>16 银行</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.ccb.com/" class="card-link" target="_blank">
+<div class="card-tit">建设银行</div>
+<div class="card-desc">建设银行</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.bankcomm.com/" class="card-link" target="_blank">
+<div class="card-tit">交通银行</div>
+<div class="card-desc">交通银行</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.abchina.com/" class="card-link" target="_blank">
+<div class="card-tit">农业银行</div>
+<div class="card-desc">农业银行</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.hao123.com/bank" class="card-link" target="_blank">
+<div class="card-tit">更多银行导航</div>
+<div class="card-desc">请自行鉴别官网</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第17栏-->
+<section class="item card-box" id="row-17">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>17 软件下载</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.jb51.net/" class="card-link" target="_blank">
+<div class="card-tit">脚本之家</div>
+<div class="card-desc">各类专业软件都有</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.pc6.com/" class="card-link" target="_blank">
+<div class="card-tit">PC6下载站</div>
+<div class="card-desc">软件下载</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.crsky.com/" class="card-link" target="_blank">
+<div class="card-tit">非凡软件</div>
+<div class="card-desc">软件下载站</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://www.52pojie.cn/" class="card-link" target="_blank">
+<div class="card-tit">吾爱破解</div>
+<div class="card-desc">破解软件下载</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://baoku.360.cn/baokuweb.html" class="card-link" target="_blank">
+<div class="card-tit">360下载</div>
+<div class="card-desc">360收录的软件下载</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.i2345.cn/software.htm" class="card-link" target="_blank">
+<div class="card-tit">I2345</div>
+<div class="card-desc">更多软件下载站集合</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--第18栏-->
+<section class="item card-box" id="row-18">
+<div class="container-fluid">
+<div class="row">
+<div class="item-tit">
+<strong>18 其他实用</strong>
+</div>
+<!--获取内容列表-->
+<div class="clearfix ">
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://search.chongbuluo.com/" class="card-link" target="_blank">
+<div class="card-tit">虫部落.快搜</div>
+<div class="card-desc">搜索引擎汇总</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://www.flvcd.com/url.php" class="card-link" target="_blank">
+<div class="card-tit">硕鼠官网</div>
+<div class="card-desc">各网站视频解析下载</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://guozhivip.com/rank/" class="card-link" target="_blank">
+<div class="card-tit">果汁排行榜</div>
+<div class="card-desc">各类热搜榜单汇集</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="navigation.html" class="card-link" target="_blank">
+<div class="card-tit">更多导航站</div>
+<div class="card-desc">更多导航网站</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="http://whx84.ysepan.com/" class="card-link" target="_blank">
+<div class="card-tit">更多资源汇</div>
+<div class="card-desc">更多资源待整理</div>
+</a>
+</div>
+<div class="col-md-3 col-sm-4 col-xs-6">
+<a href="https://github.com/" class="card-link" target="_blank">
+<div class="card-tit">GitHub</div>
+<div class="card-desc">我的网站服务商</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<!--页脚-->
+<footer class="footer">
+<div class="container">
+<div class="rwo">
+<div class="col-md-12">
+<p>吴化新的上网导航<br>邮箱：whx84@126.com</p>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</div>
+
+<!--内容区域-->
+<div id="get-top" title="回到顶部">
+<i class="icon icon-arrow-up"></i>
+</div>
+
+<!-- jQuery (ZUI中的Javascript组件依赖于jQuery) -->
+<script src="https://code.jquery.com/jquery-1.12.4.js" integrity="sha256-Qw82+bXyGq6MydymqBxNPYTaUXXq7c8v3CwiYwLLNXU=" crossorigin="anonymous"></script>
+
+<!--回到顶部-->
+<script>
+window.onscroll=function(){
+var sllTop=document.documentElement.scrollTop||document.body.scrollTop;
+if(sllTop>240){
+$("#get-top").css("display","block")
+}else{
+$("#get-top").css("display","none")
+}
+}
+$("#get-top").click(function(){
+$("body,html").animate({
+scrollTop: 0
+}, 800);<!--点击回到顶部按钮，数字越小越快-->
+})
+
+<!--判断用户使用的设备-->
+var deviceVal=browserRedirect();
+function browserRedirect() {
+var sUserAgent=navigator.userAgent.toLowerCase();
+var bIsIpad=sUserAgent.match(/ipad/i)=="ipad";
+var bIsIphoneOs=sUserAgent.match(/iphone os/i)=="iphone os";
+var bIsMidp=sUserAgent.match(/midp/i)=="midp";
+var bIsUc7=sUserAgent.match(/rv:1.2.3.4/i)=="rv:1.2.3.4";
+var bIsUc=sUserAgent.match(/ucweb/i)=="ucweb";
+var bIsAndroid=sUserAgent.match(/android/i)=="android";
+var bIsCE=sUserAgent.match(/windows ce/i)=="windows ce";
+var bIsWM=sUserAgent.match(/windows mobile/i)=="windows mobile";
+if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+return "phone";
+} else {
+return "pc";
+}
+}
+$(".nav-btn").on("click", function () {
+$(".nav").toggleClass("showNav");
+$(this).toggleClass("animated2");
+});
+
+<!--默认搜索引擎的内容，如果界面修改了需要同步修改-->
+var thisSearch="https://www.baidu.com/s?wd=";
+
+<!--回车键的处理-->
+$("#txt").keydown(function(ev){
+if(event.keyCode=="13"){
+window.open(thisSearch + $("#txt").val())
+$("#box ul").html("")
+}
+})
+
+<!--搜索引擎列表，样式一行五个内容，自动换行-->
+$(function(){
+var search={
+data: [{
+name: "百度",
+url: "https://www.baidu.com/s?wd="
+}, {
+name: "必应",
+url: "https://cn.bing.com/search?q="
+}, {
+name: "头条",
+url: "https://m.toutiao.com/search?keyword="
+}, {
+name: "GitHub",
+url: "https://github.com/search?q="
+}, {
+name: "京东",
+url: "http://search.jd.com/Search?keyword="
+}, {
+name: "淘宝",
+url: "https://s.taobao.com/search?q="
+}, {
+name: "天猫",
+url: "https://list.tmall.com/search_product.htm?q="
+}, {
+name: "阿里",
+url: "https://s.1688.com/selloffer/offer_search.htm?keywords="
+}, {
+name: "知乎",
+url: "https://www.zhihu.com/search?type=content&q="
+}, {
+name: "微博",
+url: "https://s.weibo.com/weibo/"
+}, {
+name: "B站",
+url: "http://search.bilibili.com/all?keyword="
+}, {
+name: "豆瓣",
+url: "https://www.douban.com/search?source=suggest&q="
+}, {
+name: "优酷",
+url: "https://so.youku.com/search_video/q_"
+}, {
+name: "好搜",
+url: "https://www.so.com/s?q="
+}, {
+name: "搜狗",
+url: "https://www.sogou.com/web?query="
+}]
+}
+for(var i=0; i < search.data.length; i++){
+var addList="<li>" + search.data[i].name + "</li>"
+$(".search-engine-list").append(addList);
+}
+$(".search-engine-name, .search-engine").hover(function() {
+$(".search-engine").css("display", "block")
+}, function() {
+$(".search-engine").css("display", "none")
+})
+$(".search-engine-list li").click(function() {
+var _index=$(this).index();
+var searchNameBtn=document.getElementById("search-engine-name");
+searchNameBtn.innerHTML=search.data[_index].name;
+thisSearch=search.data[_index].url;
+$(".search-engine").css("display", "none")
+})
+})
+$("#search-btn").click(function(){
+var textValue=$("#txt").val();
+if(textValue !=""){
+window.open(thisSearch + textValue)
+}
+});
+</script>
+</div>
+</body>
+</html>
