@@ -29,11 +29,17 @@ background: linear-gradient(45deg, #20b57d 40%, #258ec5 60%);
 100%{ transform: rotate(360deg) }
 }
 a{text-decoration: none;}
+.content{
+position:absolute;
+left:50%;
+top:50%;
+transform:translate(-50%, -50%);
+}
 </style>
 </head>
 <body>
 <!--内容-->
-<div style="margin-top:10px"/>
+<main class="content">
 <svg id="clock" x="0px" y="0px"
 width="200px" height="200px" viewBox="94.257 101.184 300 300" enable-background="new 94.257 101.184 300 300"
 xml:space="preserve">
@@ -176,7 +182,7 @@ c0.036,1.1-0.015,2.896-0.113,3.991L245.317,261.606z"/>
 </g>
 </g>
 </svg>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.2.0/snap.svg-min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/snap.svg/0.2.0/snap.svg-min.js"></script>
 <script src="css/index.js"></script>
 <div style="display:flex;justify-content:center; margin-top:20px; margin-bottom:5px;"/>
 <img src="css/baidu.png" width="150px" />
@@ -195,5 +201,6 @@ style="height:35px; width:250px; padding-left:10px; border-radius:10px; outline:
 <div style="display:flex;justify-content:center;">
 <iframe scrolling="no" src="https://tianqiapi.com/api.php?style=ts&skin=pitaya" frameborder="0" width="325" height="220" allowtransparency="true"></iframe>
 </div>
+</main>
 </body>
 </html>
